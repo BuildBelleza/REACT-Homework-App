@@ -28,7 +28,7 @@ nav {
 .nav-item:hover {
   font-weight: bold;
   text-decoration: underline;
-  color: black;
+  color: purple ;
 }
 
 .nav-item:first-child {
