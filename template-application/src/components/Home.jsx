@@ -1,97 +1,58 @@
-import React, { useState } from 'react';
-import { Container, Form, Button, Alert } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import React from 'react'
 
-const Contact = () => {
-  const navigate = useNavigate();
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-
-    // Simulating a delay for demonstration purposes
-    setTimeout(() => {
-      setSubmitted(true);
-    }, 2000);
-
-    // Reset form fields
-    setName('');
-    setEmail('');
-    setMessage('');
-  };
-
-  const handleReturnHome = () => {
-    navigate('/');
-  };
-
+const Home = () => {
   return (
-    <Container className="contact-container">
-      <div className="contact-wrapper">
-        <h2 className="contact-header">Contact Us</h2>
-        {submitted ? (
-          <div id="submitted-message-container">
-          <Alert variant="success" className="message-alert">
-            <div className="message-text">
-              We have received your message. Thank you for your input!
-            </div>
-            <div className="message-button">
-              <Button variant="secondary" onClick={handleReturnHome} className="submit-button">
-                Return Home
-              </Button>
-            </div>
-          </Alert>
-        </div>
-        
-        ) : (
-          <Form onSubmit={handleSubmit} className="contact-form">
-            <Form.Group controlId="name">
-              <Form.Label className="form-label">Name:</Form.Label>
-              <Form.Control
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-                className="form-control"
-              />
-            </Form.Group>
+    <div className='home-content'>
+      <h1>Welcome to Our Home Page</h1>
+      <p>
+    … In every job that must be done
+    There is an element of fun
+    You find the fun and snap!
+    The job's a game
+        <br></br>
+    … And every task you undertake
+    Becomes a piece of cake
+    A lark! A spree! It's very clear to see that
+         <br></br>
+    … A Spoonful of sugar helps the medicine go down
+    The medicine go down-wown
+    The medicine go down
+    Just a spoonful of sugar helps the medicine go down
+    In a most delightful way
+         <br></br>
+    … A robin feathering his nest
+    Has very little time to rest
+    While gathering his bits of twine and twig
+    Though quite intent in his pursuit
+    He has a merry tune to toot
+    He knows a song will move the job along - for
+         <br></br>
+    … A spoonful of sugar helps the medicine go down
+    The medicine go down-wown
+    The medicine go down
+    Just a spoonful of sugar helps the medicine go down
+    In a most delightful way
+         <br></br>
+    … The honey bee that fetch the nectar
+    From the flowers to the comb
+    Never tire of ever buzzing to and fro
+    Because they take a little nip
+    From every flower that they sip
+    And hence (And hence),
+    They find (They find)
+    Their task is not a grind.
+         <br></br>
+    … Ah-h-h-h-h-h-h-h-h-h-h ah!
+         <br></br>
+    … A Spoonful of sugar helps the medicine go down
+    The medicine go down-wown
+    The medicine go down
+    Just a spoonful of sugar helps the medicine go down
+    In a most delightful way
+      </p>
 
-            <Form.Group controlId="email">
-              <Form.Label className="form-label">Email:</Form.Label>
-              <Form.Control
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="form-control"
-              />
-            </Form.Group>
+    </div>
+  )
+}
 
-            <Form.Group controlId="message">
-              <Form.Label className="form-label">Message:</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={4}
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                required
-                className="form-control"
-              />
-            </Form.Group>
-
-            <div style={{ textAlign: 'right' }}>
-              <Button variant="secondary" type="submit" className="submit-button">
-                Submit
-              </Button>
-            </div>
-          </Form>
-        )}
-      </div>
-    </Container>
-  );
-};
-
-export default Contact;
+export default Home
