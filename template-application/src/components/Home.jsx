@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars 
 import React from 'react'
 
 const Home = () => {
@@ -8,11 +9,11 @@ const Home = () => {
     … In every job that must be done
     There is an element of fun
     You find the fun and snap!
-    The job's a game
+    The job&apos;s a game
         <br></br>
     … And every task you undertake
     Becomes a piece of cake
-    A lark! A spree! It's very clear to see that
+    A lark! A spree! It&apos;s very clear to see that
          <br></br>
     … A Spoonful of sugar helps the medicine go down
     The medicine go down-wown
